@@ -1,0 +1,1 @@
+web: gunicorn CFO_Dashboard:server
