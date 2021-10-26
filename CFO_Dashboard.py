@@ -575,7 +575,8 @@ app.layout = dbc.Container([
                                         [
                                             dbc.Col(html.H6("Quick Ratio:", style={"font-size":"20px", "color":"balck"}, className="mt-3 ml-2"), xs=10, sm=8, md=5, lg=2, xl=5, style={"margin-left":"30px"}), 
                                             dbc.Col(html.H6(id='quick_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), ),
-
+                                        ]
+                                                
                                     , no_gutters=True),
                                 
                                 ], className="text-center")
