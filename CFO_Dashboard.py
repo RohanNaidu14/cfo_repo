@@ -400,28 +400,28 @@ app.layout = dbc.Container([
                     html.H6("Company Name", className="font-weight-bold text-left mt-2", style={"font-size":"16px", "color":"#4c1e30", "font-family": "Georgia, serif"}),
                     dcc.Dropdown(id="company_drpdwn", multi=False, value='',
                     options=[{'label': x, 'value': x} for x in main_df.COMPANY_NAME.unique()], placeholder='Select Company', className="mt-2 shadow")
-                ], width=2), 
+                ], xs=10, sm=8, md=5, lg=2, xl=2), 
 
             dbc.Col(
                 [
                     html.H6("Ledger Section Name", className="font-weight-bold text-left mt-2", style={"font-size":"16px", "color":"#4c1e30", "font-family": "Georgia, serif"}),
                     dcc.Dropdown(id="ledger_drpdwn", multi=False, value='',
                     options=[{'label': x, 'value': x} for x in main_df.LEDGER_SECTION.unique()], placeholder='Select Ledger', className="mt-2 shadow")
-                ], width=2),
+                ], xs=10, sm=8, md=5, lg=2, xl=2),
 
             dbc.Col(
                 [
                     html.H6("Year", className="font-weight-bold text-left mt-2", style={"font-size":"16px", "color":"#4c1e30", "font-family": "Georgia, serif"}),
                     dcc.Dropdown(id="year_drpdwn", multi=False, value='',
                     options=[{'label': x, 'value': x} for x in main_df.YEAR.unique()], placeholder='Select Year', className="mt-2 shadow")
-                ], width=1),
+                ], xs=10, sm=8, md=5, lg=2, xl=2),
 
             dbc.Col(
                 [
                     html.H6("Month", className="font-weight-bold text-left mt-2", style={"font-size":"16px", "color":"#4c1e30", "font-family": "Georgia, serif"}),
                     dcc.Dropdown(id="month_drpdwn", multi=False, value='',
                     options=[{'label': x, 'value': x} for x in main_df.MONTH.sort_values().unique()], placeholder='Select Month', className="mt-2 shadow")
-                ], width=1),
+                ], xs=10, sm=8, md=5, lg=2, xl=2),
 
         ], className="mb-4 ml-3 mr-3 rounded ", justify='start', style={"background-color": "#c0c6fb", "height": "100px", "border": "1px solid"}),
 
@@ -440,7 +440,7 @@ app.layout = dbc.Container([
                                     ## first value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Net Sales:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-5"), style={"margin-left":"80px"}), 
+                                            dbc.Col(html.H6("Net Sales:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-5"), xs=10, sm=8, md=5, lg=2, xl=6), 
                                             dbc.Col(html.H6(id='net_sales_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"30px"}),
                                         ]
 
@@ -449,7 +449,7 @@ app.layout = dbc.Container([
                                     ## second value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Gross Margin:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-2"), style={"margin-left":"85px"}), 
+                                            dbc.Col(html.H6("Gross Margin:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-2"), xs=10, sm=8, md=5, lg=2, xl=6), 
                                             dbc.Col(html.H6(id='gross_margin_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"35px"}),
                                         ]
 
@@ -458,7 +458,7 @@ app.layout = dbc.Container([
                                     # # third value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Operating Profit:", style={"font-size":"20px", "color":"black"}, className="mt-3"), style={"margin-left":"75px"}), 
+                                            dbc.Col(html.H6("Operating Profit:", style={"font-size":"20px", "color":"black"}, className="mt-3"), xs=10, sm=8, md=5, lg=2, xl=6), 
                                             dbc.Col(html.H6(id='operating_profit_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"25px"}),
                                         ]
 
@@ -481,8 +481,8 @@ app.layout = dbc.Container([
                                     ## first value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("AR:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), style={"margin-left":"110px"}), 
-                                            dbc.Col(html.H6(id='ar_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"90px"}),
+                                            dbc.Col(html.H6("AR:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), xs=10, sm=8, md=5, lg=2, xl=3, style={"margin-left":"60px"}), 
+                                            dbc.Col(html.H6(id='ar_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), xs=10, sm=8, md=5, lg=2, xl=5, style={"margin-right":"30px"}),
                                         ]
 
                                     , no_gutters=True),
@@ -490,8 +490,8 @@ app.layout = dbc.Container([
                                     ## second value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("AP:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), style={"margin-left":"110px"}), 
-                                            dbc.Col(html.H6(id='ap_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"90px"}),
+                                            dbc.Col(html.H6("AP:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), xs=10, sm=8, md=5, lg=2, xl=3, style={"margin-left":"60px"}), 
+                                            dbc.Col(html.H6(id='ap_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), xs=10, sm=8, md=5, lg=2, xl=5, style={"margin-right":"30px"}),
                                         ]
 
                                     , no_gutters=True),
@@ -499,8 +499,8 @@ app.layout = dbc.Container([
                                     # third value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Cash to Cash Cycle:", style={"font-size":"20px", "color":"black"}, className="mt-3"), style={"margin-left":"25px"}), 
-                                            dbc.Col(html.H6(id='ctc_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"15px"}),
+                                            dbc.Col(html.H6("Cash to Cash Cycle:", style={"font-size":"20px", "color":"black"}, className="mt-3"), xs=10, sm=8, md=5, lg=2, xl=7,), 
+                                            dbc.Col(html.H6(id='ctc_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), xs=10, sm=8, md=5, lg=2, xl=5,),
                                         ]
 
                                     , no_gutters=True),
@@ -522,7 +522,7 @@ app.layout = dbc.Container([
                                     ## first value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Return On Assets:", style={"font-size":"20px", "color":"black"}, className="mt-4 ml-2"), style={"margin-left":"50px"}), 
+                                            dbc.Col(html.H6("Return On Assets:", style={"font-size":"20px", "color":"black"}, className="mt-4 ml-2"),  xs=10, sm=8, md=5, lg=2, xl=7, ), 
                                             dbc.Col(html.H6(id='roa_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-4"), style={"margin-right":"2px"}),
                                         ]
 
@@ -531,7 +531,7 @@ app.layout = dbc.Container([
                                     ## second value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Return On Equity:", style={"font-size":"20px", "color":"black"}, className="mt-4 ml-2"), style={"margin-left":"50px"}), 
+                                            dbc.Col(html.H6("Return On Equity:", style={"font-size":"20px", "color":"black"}, className="mt-4 ml-2"), xs=10, sm=8, md=5, lg=2, xl=7, ), 
                                             dbc.Col(html.H6(id='roe_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-4"), style={"margin-right":"2px"}),
                                         ]
 
@@ -555,8 +555,8 @@ app.layout = dbc.Container([
                                     ## first value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("WORKING CAPITAL:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-2"), style={"margin-left":"20px"}), 
-                                            dbc.Col(html.H6(id='working_cap_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"2px"}),
+                                            dbc.Col(html.H6("Working Capital:", style={"font-size":"20px", "color":"black"}, className="mt-3"), xs=10, sm=8, md=5, lg=2, xl=6, ), 
+                                            dbc.Col(html.H6(id='working_cap_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3 ml-1"), xs=10, sm=8, md=5, lg=2, xl=6, ),
                                         ]
 
                                     , no_gutters=True),
@@ -564,8 +564,8 @@ app.layout = dbc.Container([
                                     ## second value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("WC RATIO:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), style={"margin-left":"78px"}), 
-                                            dbc.Col(html.H6(id='working_cap_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"58px"}),
+                                            dbc.Col(html.H6("WC Ratio:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), xs=10, sm=8, md=5, lg=2, xl=5, style={"margin-left":"30px"}), 
+                                            dbc.Col(html.H6(id='working_cap_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), xs=10, sm=8, md=5, lg=2, xl=5, ),
                                         ]
 
                                     , no_gutters=True),
@@ -573,9 +573,8 @@ app.layout = dbc.Container([
                                     # third value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("QUICK RATIO:", style={"font-size":"20px", "color":"balck"}, className="mt-3 ml-2"), style={"margin-left":"70px"}), 
-                                            dbc.Col(html.H6(id='quick_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"48px"}),
-                                        ]
+                                            dbc.Col(html.H6("Quick Ratio:", style={"font-size":"20px", "color":"balck"}, className="mt-3 ml-2"), xs=10, sm=8, md=5, lg=2, xl=5, style={"margin-left":"30px"}), 
+                                            dbc.Col(html.H6(id='quick_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), ),
 
                                     , no_gutters=True),
                                 
@@ -601,8 +600,8 @@ app.layout = dbc.Container([
                                     ## first value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Debt Ratio:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-5"), style={"margin-left":"190px"}), 
-                                            dbc.Col(html.H6(id='debt_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"180px"}),
+                                            dbc.Col(html.H6("Debt Ratio:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-4"), xs=10, sm=8, md=5, lg=2, xl=3, style={"margin-left":"150px"}), 
+                                            dbc.Col(html.H6(id='debt_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), xs=10, sm=8, md=5, lg=2, xl=3, ), 
                                         ]
 
                                     , no_gutters=True),
@@ -610,8 +609,8 @@ app.layout = dbc.Container([
                                     ## second value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Debt To Equity Ratio:", style={"font-size":"20px", "color":"black"}, className="mt-3 ml-5"), style={"margin-left":"110px"}), 
-                                            dbc.Col(html.H6(id='de_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"100px"}),
+                                            dbc.Col(html.H6("Debt To Equity Ratio:", style={"font-size":"20px", "color":"black"}, className="mt-3"), xs=10, sm=8, md=5, lg=2, xl=4, style={"margin-left":"100px"}), 
+                                            dbc.Col(html.H6(id='de_ratio_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3 ml-1"), xs=10, sm=8, md=5, lg=2, xl=4, ),
                                         ]
 
                                     , no_gutters=True),
@@ -619,8 +618,8 @@ app.layout = dbc.Container([
                                     # # third value in the card
                                     dbc.Row(
                                         [
-                                            dbc.Col(html.H6("Long Term Debt to Equity:", style={"font-size":"20px", "color":"balck"}, className="mt-3 ml-5"), style={"margin-left":"62px"}), 
-                                            dbc.Col(html.H6(id='long_term_de_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3"), style={"margin-right":"50px"}),
+                                            dbc.Col(html.H6("Long Term Debt to Equity:", style={"font-size":"20px", "color":"balck"}, className="mt-3"), xs=10, sm=8, md=5, lg=2, xl=5, style={"margin-left":"55px"}), 
+                                            dbc.Col(html.H6(id='long_term_de_card', children="0", style={"font-size":"20px", "color":"black"}, className="text-left font-weight-bold mt-3 ml-1"), xs=10, sm=8, md=5, lg=2, xl=3, ),
                                         ]
 
                                     , no_gutters=True),
